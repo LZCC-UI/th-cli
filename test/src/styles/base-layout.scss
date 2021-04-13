@@ -1,0 +1,115 @@
+.base-admin-layout {
+    padding: 20px;
+    // min-width:800px;
+    // overflow-x: scroll;
+    &.without-padding {
+        padding: 0;
+    }
+
+    .layout-data-container {
+        .el-card__body {
+            padding: 5px 10px;
+
+            .layout-data {
+                position: relative;
+
+                p {
+                    margin: 8px;
+
+                    &:first-of-type {
+                        color: rgba($color: #000000, $alpha: 0.45);
+                        font-size: 12px;
+                    }
+
+                    &:last-of-type {
+                        color: rgba($color: #000000, $alpha: 0.85);
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+                }
+
+                .layout-data-icon {
+                    position: absolute;
+                    right: 10px;
+                    top: 0px;
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    .layout-content {
+        background: #fff;
+        margin-top: 20px;
+        padding: 10px;
+
+        .layout-top-header {
+            padding: 10px 0;
+        }
+
+        .layout-float-search {
+            display: flex;
+            // align-items: flex-start;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+            .el-button{
+                margin-top:5px ;
+            }
+            .search-item {
+                min-width: 100px;
+                margin-top:5px;
+                margin-right: 10px;
+                margin-top: 10px;
+                &.single{
+                    width: 200px !important;
+                }
+                
+                &.double {
+                    width: 400px;
+                    // margin-right: 2%;
+
+                    .el-select .el-input {
+                        width: 100px;
+                    }
+
+                    .input-with-select .el-input-group__prepend {
+                        background-color: #fff;
+                    }
+
+                    .el-range-editor {
+                        width: 100%;
+                    }
+                }
+
+                &.triple {
+                    width: 36%;
+                    flex: 1;
+                    display: flex;
+                }
+            }
+        }
+
+        .layout-list {
+            margin-top: 20px;
+
+            .layout-table {
+
+                thead th,
+                thead tr {
+                    background: #f5f7fa;
+                }
+            }
+        }
+
+        .layout-footer {
+            margin-top: 10px;
+
+            .el-pagination {
+                text-align: center;
+            }
+        }
+    }
+}
