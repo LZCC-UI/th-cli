@@ -3,7 +3,7 @@ const { program } = require("commander");
 const fs = require("fs");
 program.version(require("../package.json").version, "-v, --version");
 program
-  .command("init <name>")
-  .description("init project")
+  .command("creat <name>")
+  .description("creat project")
   .action((name) => require("../lib/init")(name));
 program.parse(process.argv);
