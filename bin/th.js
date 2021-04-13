@@ -5,5 +5,6 @@ program.version(require('../package.json').version, '-v, --version')
 program
   .command('create <name>')
   .description('create project')
-  .action(name => require('../lib/crm')(name))
+  .option('-r,--registry [registry]', 'remote registry')
+  .action((name, cmd) => require('../lib/crm')(name, cmd))
 program.parse(process.argv)
